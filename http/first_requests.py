@@ -7,8 +7,6 @@ url1 = "https://icanhazdadjoke.com"
 
 res = requests.get(url1, headers ={"Accept": "text/plain"})
 
-print(res.text)
-
 
 url2 = "https://icanhazdadjoke.com/search"
 res1 = requests.get(
