@@ -15,6 +15,14 @@ payload = {
 
 print("Requesting Token...\n")
 res = requests.post(auth_url, data=payload, verify=False)
-print(res)
+print(res.json())
 access_token = res.json()['access_token']
 print("Access Token = {}\n".format(access_token))
+
+
+
+header = {'Authorization': 'Bearer ' + access_token}
+param = {'per_page': 200, 'page': 1}
+my_dataset = requests.get(activites_url, headers=header, params=param).json()
+
+print(my_dataset)
