@@ -94,6 +94,7 @@ print(User.active_users)
 
 
 class Moderator(User):
+    total_mods = 0
     def __init__(self,first,last,age,community):
         super().__init__(first, last, age)
         self.community = community
@@ -101,7 +102,8 @@ class Moderator(User):
     
     @classmethod
     def display_active_users(cls):
-        return f"{self.full_name()} removed a post from the {self.community} community"
+        return f"There are currently {cls.total_mods} active mods"
+        
 
     def remove_post(self):
-        return f"{self.full_name()}"
+        return f"{self.full_name()} removed a post from the {self.community} community"
