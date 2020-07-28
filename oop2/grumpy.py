@@ -1,8 +1,12 @@
+# grumpydict inherits from Dict class
 class GrumpyDict(dict):
 	def __repr__(self):
 		print("NONE OF YOUR BUSINESS")
+		# we call __repr__ method from the dict class
 		return super().__repr__()
 
+	# missing ona a dict usually returns error
+	# here we return this message
 	def __missing__(self, key):
 		print(f"YOU WANT {key}?  WELL IT AINT HERE!")
 
