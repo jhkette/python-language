@@ -18,6 +18,7 @@ class User:
     # this represent the instantiation of the class
     # ie in this instance it would return a users name and age
     # So for example if we print User1 we get name and age as opposed to a number
+    # For class special methods see https://docs.python.org/3/reference/datamodel.html
     def __repr__(self):
         return f"{self.first} is {self.age}"
 
