@@ -1,4 +1,6 @@
-# grumpydict inherits from Dict class
+# grumpydict INHERITS from Dict class
+# we are using the dictionarys dunder/magic methods to
+# alter how a dictionary works
 class GrumpyDict(dict):
 	def __repr__(self):
 		print("NONE OF YOUR BUSINESS")
@@ -10,6 +12,7 @@ class GrumpyDict(dict):
 	def __missing__(self, key):
 		print(f"YOU WANT {key}?  WELL IT AINT HERE!")
 
+	# change setitem dunder method of dictionary
 	def __setitem__(self, key, value):
 		print("YOU WANT TO CHANGE THE DICTIONARY?")
 		print("OK FINE...")
